@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ยีราฟนครพนม — คอร์สภาษาอังกฤษเด็ก 4–12 ปี</title>
+<meta name="description" content="ยีราฟนครพนม สอนภาษาอังกฤษเด็ก 4–12 ปี ผ่านกิจกรรมและการเล่น ไม่กดดัน ไม่ท่องจำ · ทดสอบวัดระดับฟรี · ตรงข้าม ร.ร.อนุบาลนครพนม · 081-1123465">
+<meta property="og:title" content="ยีราฟนครพนม — ภาษาอังกฤษผ่านการเล่น เด็ก 4–12 ปี">
+<meta property="og:description" content="Play • Learn • Grow · นัดทดสอบวัดระดับฟรีที่สาขา">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Itim&family=Mitr:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#F0619A; --pink-soft:#FDE3EE; --orange:#F7A21B; --orange-soft:#FFEFD2;
+  --cream:#FFF6E2; --cream-2:#FBE9BE; --brown:#5B3A29; --brown-2:#8A6450;
+  --blue:#5BB4E5; --green:#8DCB52; --rust:#D98448; --violet:#E07FC8; --sky:#4FA6DD;
+  --mint:#A9DE7A; --white:#fff;
+  --r:22px; --shadow:0 6px 0 rgba(91,58,41,.12), 0 14px 30px rgba(91,58,41,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mitr',sans-serif;font-weight:400;color:var(--brown);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+a{color:inherit}
+img,svg{display:block;max-width:100%;height:auto}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.en{font-family:'Fredoka',sans-serif}
+.hand{font-family:'Itim',cursive}
+
+/* outlined headline like the brochure */
+.outline{color:var(--brown);text-shadow:
+ 3px 0 #fff,-3px 0 #fff,0 3px #fff,0 -3px #fff,2px 2px #fff,-2px -2px #fff,2px -2px #fff,-2px 2px #fff,
+ 0 6px 0 rgba(91,58,41,.18)}
+.outline-w{color:#fff;text-shadow:
+ 3px 0 var(--brown),-3px 0 var(--brown),0 3px var(--brown),0 -3px var(--brown),2px 2px var(--brown),-2px -2px var(--brown),2px -2px var(--brown),-2px 2px var(--brown),
+ 0 6px 0 rgba(91,58,41,.25)}
+
+/* background molecules */
+.bg-dots{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.bg-dots i{position:absolute;border-radius:50%;opacity:.55}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,246,226,.92);backdrop-filter:blur(8px);border-bottom:2px dashed rgba(91,58,41,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-badge{width:42px;height:42px;border-radius:14px;background:var(--orange);display:grid;place-items:center;box-shadow:inset 0 -4px 0 rgba(0,0,0,.12)}
+.logo-sub{font-size:14px;font-weight:600;color:#fff;background:var(--brown);border-radius:999px;padding:1px 10px;line-height:1.5}
+.logo b{font-family:'Fredoka';font-size:22px;font-weight:700;letter-spacing:.3px;line-height:1}
+.logo small{display:block;font-size:12px;color:var(--brown-2);font-weight:500;line-height:1.2}
+.nav-links{display:flex;gap:22px;font-size:15px;font-weight:500}
+.nav-links a{text-decoration:none;opacity:.85}
+.nav-links a:hover{color:var(--pink);opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Mitr';font-weight:600;font-size:16px;text-decoration:none;border:none;cursor:pointer;border-radius:999px;padding:14px 24px;transition:transform .15s, box-shadow .15s}
+.btn:active{transform:translateY(3px)}
+.btn-pink{background:var(--pink);color:#fff;box-shadow:0 5px 0 #C9407A}
+.btn-pink:active{box-shadow:0 2px 0 #C9407A}
+.btn-white{background:#fff;color:var(--brown);box-shadow:0 5px 0 rgba(91,58,41,.18)}
+.btn-orange{background:var(--orange);color:var(--brown);box-shadow:0 5px 0 #C97F0B}
+.btn-sm{padding:9px 16px;font-size:14px;box-shadow:0 3px 0 #C9407A}
+
+/* hero */
+.hero{position:relative;padding:34px 0 60px;overflow:hidden}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.pill-tag{position:relative;z-index:2;display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:6px 14px 6px 8px;font-size:14px;font-weight:500;box-shadow:0 3px 0 rgba(91,58,41,.1)}
+.pill-tag span{background:var(--green);color:#fff;border-radius:999px;padding:2px 10px;font-family:'Fredoka';font-weight:600}
+.hero h1{font-size:clamp(38px,6.4vw,64px);font-weight:700;line-height:1.18;margin:18px 0 14px}
+.hero h1 .big{font-size:1.18em;color:var(--pink)}
+.hero h1 .big.o{color:var(--orange)}
+.hero p.lead{font-size:clamp(17px,2.2vw,19px);max-width:30em;color:var(--brown-2)}
+.plg{font-family:'Fredoka';font-weight:700;font-size:20px;letter-spacing:.5px;margin:18px 0 22px;display:flex;gap:10px;flex-wrap:wrap}
+.plg span{padding:4px 14px;border-radius:999px;color:#fff}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{margin-top:12px;font-size:14px;color:var(--brown-2)}
+.hero-art{position:relative;display:flex;justify-content:center}
+.blob{position:absolute;width:88%;aspect-ratio:1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:radial-gradient(circle at 35% 30%,#FFD9E8,#F9B9D3);top:6%;z-index:0}
+.mascot{position:relative;z-index:1;width:min(300px,70%);filter:drop-shadow(0 12px 0 rgba(91,58,41,.10));animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.bubble{position:absolute;z-index:2;top:2%;right:2%;background:#fff;border-radius:22px;padding:10px 16px;font-family:'Fredoka';font-weight:600;font-size:20px;box-shadow:var(--shadow);transform:rotate(4deg)}
+.bubble small{display:block;font-family:'Itim';font-weight:400;font-size:16px;color:var(--pink)}
+.bubble:after{content:"";position:absolute;left:18px;bottom:-12px;border:12px solid transparent;border-top-color:#fff;border-bottom:0}
+.free-stamp{position:absolute;z-index:2;left:0;bottom:6%;width:122px;height:122px;border-radius:50%;background:#E8553A;color:#fff;display:grid;place-items:center;text-align:center;border:5px solid #fff;box-shadow:var(--shadow);transform:rotate(-10deg)}
+.free-stamp b{font-size:34px;line-height:1;display:block}
+.free-stamp small{font-size:12px;line-height:1.25;display:block}
+
+/* sections */
+section{position:relative}
+.sec{padding:64px 0}
+.sec-head{text-align:center;margin-bottom:34px}
+.sec-head .kicker{font-family:'Fredoka';font-weight:600;color:var(--pink);letter-spacing:1px;font-size:15px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.25;margin-top:4px}
+.sec-head p{color:var(--brown-2);margin-top:8px;font-size:17px}
+
+/* test steps */
+.test{background:linear-gradient(180deg,var(--cream) 0,#FFF0C9 100%)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{background:#fff;border-radius:var(--r);padding:26px 22px 22px;box-shadow:var(--shadow);position:relative}
+.step .num{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-family:'Fredoka';font-weight:700;font-size:24px;color:#fff;margin-bottom:12px}
+.step h3{font-size:20px;font-weight:600;line-height:1.35}
+.step p{font-size:15.5px;color:var(--brown-2);margin-top:6px}
+.test-cta{margin-top:28px;text-align:center}
+.test-cta .hand{display:block;margin-top:10px;font-size:17px;color:var(--brown-2)}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why{background:#fff;border-radius:var(--r);padding:24px 20px;text-align:center;box-shadow:var(--shadow)}
+.why .ico{width:78px;height:78px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center}
+.why h3{font-size:19px;font-weight:600;line-height:1.35}
+.why p{font-size:15px;color:var(--brown-2);margin-top:6px}
+
+/* courses */
+.courses{background:var(--cream-2);overflow:hidden}
+.course-list{display:flex;flex-direction:column;gap:22px}
+.course{background:#fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+.course-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;color:#fff}
+.course-bar h3{font-family:'Fredoka';font-weight:700;font-size:clamp(26px,4vw,34px);line-height:1.05;letter-spacing:.5px;
+  text-shadow:2px 0 var(--brown),-2px 0 var(--brown),0 2px var(--brown),0 -2px var(--brown),2px 2px var(--brown),-2px -2px var(--brown),2px -2px var(--brown),-2px 2px var(--brown),0 4px 0 rgba(0,0,0,.15)}
+.course-bar .sessions{background:rgba(255,255,255,.95);color:var(--brown);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600;white-space:nowrap}
+.course-body{display:grid;grid-template-columns:1fr auto;gap:18px;padding:18px 22px 22px;align-items:center}
+.course-body p{font-size:16px;color:var(--brown)}
+.course-body .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.course-body .tags span{font-size:13px;background:var(--cream);border-radius:999px;padding:3px 11px;color:var(--brown-2);font-weight:500}
+.price{display:flex;gap:10px}
+.price div{text-align:center;min-width:92px}
+.price small{display:inline-block;background:var(--brown);color:#fff;border-radius:999px;padding:1px 12px;font-family:'Fredoka';font-weight:600;font-size:13px}
+.price b{display:block;font-family:'Fredoka';font-weight:700;font-size:28px;line-height:1.2;margin-top:4px}
+.price em{font-style:normal;font-size:13px;color:var(--brown-2)}
+
+/* decode mini demo */
+.decode{margin-top:14px;background:var(--pink-soft);border-radius:18px;padding:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.decode-box{display:grid;grid-template-rows:auto auto auto;gap:4px;text-align:center;min-width:180px}
+.decode-row{display:flex;gap:6px;justify-content:center}
+.decode-row span{width:44px;height:40px;border-radius:10px;display:grid;place-items:center;font-size:22px;font-weight:600;background:#fff}
+.decode-row.en span{font-family:'Fredoka';color:var(--sky)}
+.decode-row.th span{color:var(--pink)}
+.decode-row.word span{width:auto;padding:0 18px;background:var(--pink);color:#fff;font-size:24px}
+.decode-row.th span, .decode-row.word span{opacity:0;transform:translateY(-6px);transition:all .35s}
+.decode.on .decode-row.th span, .decode.on .decode-row.word span{opacity:1;transform:none}
+.decode-row.th span:nth-child(2){transition-delay:.15s}.decode-row.th span:nth-child(3){transition-delay:.3s}.decode-row.word span{transition-delay:.55s}
+.decode-txt{flex:1;min-width:180px;font-size:15px}
+.decode-txt b{color:var(--pink)}
+.decode button{margin-top:8px;font-family:'Mitr';font-weight:600;font-size:14px;border:none;border-radius:999px;padding:8px 16px;background:#fff;color:var(--pink);cursor:pointer;box-shadow:0 3px 0 rgba(240,97,154,.3)}
+
+.course-foot{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.note-card{background:#fff;border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start}
+.note-card .dot{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:22px}
+.note-card h4{font-size:17px;font-weight:600}
+.note-card p{font-size:15px;color:var(--brown-2)}
+
+/* page / fb */
+.fb{padding:60px 0}
+.fb-card{background:var(--pink);border-radius:32px;color:#fff;padding:34px 30px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;position:relative;overflow:hidden;box-shadow:0 8px 0 #C9407A}
+.fb-card h2{font-size:clamp(24px,3.6vw,34px);font-weight:700;line-height:1.3}
+.fb-card p{opacity:.95;margin-top:6px}
+.fb-card .ring{position:absolute;border-radius:50%;border:16px solid rgba(255,255,255,.12)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.c-card{background:#fff;border-radius:28px;padding:26px;box-shadow:var(--shadow)}
+.c-row{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:2px dashed var(--cream-2);text-decoration:none}
+.c-row:last-child{border:none}
+.c-row .ic{flex:none;width:48px;height:48px;border-radius:16px;display:grid;place-items:center}
+.c-row b{display:block;font-weight:600;font-size:17px;line-height:1.3}
+.c-row small{color:var(--brown-2);font-size:14px}
+.map-card{background:var(--sky);border-radius:28px;color:#fff;padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:240px;box-shadow:0 8px 0 #2F86BE;position:relative;overflow:hidden}
+.map-card h3{font-size:24px;font-weight:700;line-height:1.3}
+.map-card .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.12) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.12) 2px,transparent 2px);background-size:34px 34px}
+.map-card > *{position:relative}
+.map-card .building{width:calc(100% + 52px);max-width:none;margin:-26px -26px 0;height:200px;object-fit:cover;object-position:center 60%;display:block}
+.map-card .grid-bg{top:200px}
+.map-hint{font-size:15px;opacity:.95;margin-top:4px}
+
+footer{padding:34px 0 20px;text-align:center;font-size:14px;color:var(--brown-2)}
+footer .plg{justify-content:center;font-size:16px;margin:0 0 10px}
+
+
+/* course motion graphics */
+.art{position:relative;width:220px;aspect-ratio:1;border-radius:20px;overflow:hidden;border:4px solid var(--cream);display:block;padding:0;font:inherit;color:inherit}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.art-chip{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);border-radius:999px;padding:2px 10px;font-size:12.5px;font-weight:600;color:var(--brown)}
+.art *{transform-box:fill-box}
+.art-kinder{background:radial-gradient(circle at 20% 20%,#fff 0 6%,transparent 7%),#DDF0FB}
+.k-shape{transform-origin:center;animation:kb 2.4s ease-in-out infinite}
+.k2{animation-delay:.3s}.k3{animation-delay:.6s}
+@keyframes kb{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(8deg)}}
+.k-line{stroke-dasharray:300;stroke-dashoffset:300;animation:draw 4s ease-in-out infinite}
+.k-crayon{offset-path:path('M40 150 Q80 110 120 150 T200 150 T280 150');offset-rotate:0deg;animation:ride 4s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:300;opacity:1}60%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes ride{0%{offset-distance:0%;opacity:1}60%,85%{offset-distance:100%;opacity:1}100%{offset-distance:100%;opacity:0}}
+.art-ia{background:#EAF6DC}
+.ia-trace{stroke-dasharray:380;stroke-dashoffset:380;animation:trace 4.5s ease-in-out infinite}
+@keyframes trace{0%{stroke-dashoffset:380;opacity:1}55%,88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.ia-pencil{offset-path:path('M95 165 L135 40 L175 165 M110 120 L160 120');offset-rotate:0deg;animation:ride2 4.5s ease-in-out infinite}
+@keyframes ride2{0%{offset-distance:0%;opacity:1}55%,88%{offset-distance:100%;opacity:1}100%{offset-distance:100%;opacity:0}}
+.ia-small{transform-origin:center;animation:pop 4.5s ease-in-out infinite}
+@keyframes pop{0%,55%{transform:scale(0);opacity:0}65%{transform:scale(1.15);opacity:1}72%,90%{transform:scale(1)}100%{transform:scale(1);opacity:0}}
+.ia-float{animation:kb 3s ease-in-out infinite}.ia-float.f2{animation-delay:.8s}
+.art-starter{background:linear-gradient(180deg,#FDEBDD 0 70%,#F6D2B5 70%)}
+.st-girl,.st-boy{position:absolute;bottom:-6%;height:62%;width:auto;animation:bob 2.6s ease-in-out infinite}
+.st-girl{left:4%}.st-boy{right:4%;animation-delay:.5s}
+.st-b{position:absolute;background:#fff;border-radius:16px;padding:5px 12px;font-weight:600;font-size:14px;white-space:nowrap;box-shadow:0 3px 0 rgba(91,58,41,.12);opacity:0;animation:say 6s ease-in-out infinite}
+.st-b.b1{left:8%;top:9%;color:var(--pink)}
+.st-b.b2{right:6%;top:26%;color:var(--sky);animation-delay:0s;animation-name:say2}
+.st-b.b3{left:12%;top:43%;color:var(--orange);animation-name:say3}
+@keyframes say{0%,4%{opacity:0;transform:scale(.6)}10%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+@keyframes say2{0%,28%{opacity:0;transform:scale(.6)}34%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+@keyframes say3{0%,52%{opacity:0;transform:scale(.6)}58%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+.art-spell{background:#FBE4F2;cursor:pointer;border-color:var(--cream)}
+.sp-tiles{position:absolute;left:0;right:0;top:20%;display:flex;justify-content:center;gap:8px;perspective:400px}
+.sp-tile{position:relative;width:48px;height:56px;transform-style:preserve-3d}
+.sp-tile .f,.sp-tile .b{position:absolute;inset:0;border-radius:12px;display:grid;place-items:center;font-size:28px;font-weight:700;backface-visibility:hidden;box-shadow:0 4px 0 rgba(91,58,41,.15)}
+.sp-tile .f{background:#fff;color:var(--sky)}
+.sp-tile .b{background:var(--pink);color:#fff;transform:rotateY(180deg)}
+.art-spell.run .sp-tile{animation:flip 5s ease-in-out infinite}
+.art-spell.run .sp-tile:nth-child(2){animation-name:flip2}.art-spell.run .sp-tile:nth-child(3){animation-name:flip3}
+@keyframes flip{0%,14%{transform:none}22%,90%{transform:rotateY(180deg)}100%{transform:none}}
+@keyframes flip2{0%,24%{transform:none}32%,90%{transform:rotateY(180deg)}100%{transform:none}}
+@keyframes flip3{0%,34%{transform:none}42%,90%{transform:rotateY(180deg)}100%{transform:none}}
+.sp-word{position:absolute;left:50%;top:58%;transform:translateX(-50%) scale(0);background:#fff;border-radius:999px;padding:4px 16px;font-size:20px;font-weight:700;color:var(--brown);white-space:nowrap}
+.art-spell.run .sp-word{animation:wpop 5s ease-in-out infinite}
+@keyframes wpop{0%,48%{transform:translateX(-50%) scale(0)}56%{transform:translateX(-50%) scale(1.12)}62%,90%{transform:translateX(-50%) scale(1)}100%{transform:translateX(-50%) scale(0)}}
+.sp-glass{position:absolute;top:13%;left:16%;font-size:30px;animation:scan 5s ease-in-out infinite}
+@keyframes scan{0%,10%{transform:translateX(0);opacity:1}45%{transform:translateX(130px);opacity:1}60%,100%{transform:translateX(130px);opacity:0}}
+.art-gram{background:#DFF0FB}
+.g-row{position:absolute;left:0;right:0;top:34%;display:flex;justify-content:center;align-items:flex-end;gap:6px}
+.g-blk{border-radius:12px;padding:6px 12px;font-weight:700;font-size:22px;color:#fff;box-shadow:0 4px 0 rgba(0,0,0,.15);animation:g1 5s ease-in-out infinite}
+.g1{background:var(--pink)}
+.g2{background:var(--orange);animation-name:g2}
+.g3{background:var(--green);animation-name:g3}
+.g-dot{font-size:30px;font-weight:700;line-height:1;opacity:0;animation:gd 5s ease-in-out infinite}
+@keyframes g1{0%{transform:translate(-20px,-50px) rotate(-18deg)}15%,85%{transform:none}100%{transform:translate(-20px,-50px) rotate(-18deg)}}
+@keyframes g2{0%,10%{transform:translate(10px,60px) rotate(14deg)}28%,85%{transform:none}100%{transform:translate(10px,60px) rotate(14deg)}}
+@keyframes g3{0%,22%{transform:translate(30px,-60px) rotate(20deg)}40%,85%{transform:none}100%{transform:translate(30px,-60px) rotate(20deg)}}
+@keyframes gd{0%,42%{opacity:0}48%,85%{opacity:1}100%{opacity:0}}
+.g-star{position:absolute;left:50%;top:62%;transform:translateX(-50%) scale(0);background:#fff;border-radius:999px;padding:3px 14px;font-family:'Fredoka';font-weight:700;font-size:18px;color:var(--orange);animation:wpop 5s ease-in-out infinite;animation-delay:.1s}
+.gallery .g-big img{height:auto !important;aspect-ratio:4/3}
+@media (max-width:860px){
+  .art{width:100%;aspect-ratio:16/10}
+  .sp-glass{left:30%}
+}
+@media (prefers-reduced-motion:reduce){ .art *{animation:none !important} .k-line,.ia-trace{stroke-dashoffset:0} .st-b,.g-dot{opacity:1} .ia-small{transform:none} }
+
+
+.socials{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:6px 0 14px}
+.socials a{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--sc);display:grid;place-items:center;box-shadow:0 3px 0 rgba(91,58,41,.12);text-decoration:none;transition:transform .15s}
+.socials a:active{transform:translateY(2px)}
+.socials a span{display:none}
+.socials.big{position:relative;margin:0;justify-content:flex-start;display:grid;grid-template-columns:1fr 1fr;gap:10px;min-width:280px}
+.socials.big a{width:auto;height:auto;border-radius:999px;padding:11px 16px;display:flex;gap:8px;align-items:center;justify-content:center;font-weight:600;font-size:15px;box-shadow:0 4px 0 rgba(0,0,0,.12)}
+.socials.big a span{display:inline;color:var(--brown)}
+@media (max-width:520px){ .socials.big{min-width:0} }
+
+
+/* reels */
+.reels-sec{background:linear-gradient(180deg,var(--cream),#FFE9F1)}
+.reels-grid{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;max-width:1000px;margin:0 auto}
+.reel-strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px}
+.reel{position:relative;flex:none;width:250px;aspect-ratio:9/16;border-radius:28px;overflow:hidden;background:#000;border:6px solid #fff;box-shadow:var(--shadow);scroll-snap-align:center;cursor:pointer}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel-sound{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);font-size:18px;cursor:pointer}
+.reel figcaption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(91,58,41,.82);color:#fff;border-radius:14px;padding:6px 10px;font-size:13px;text-align:center}
+.reel-side h3{font-size:22px;font-weight:600;margin-bottom:8px}
+.ticks{list-style:none;display:grid;gap:10px}
+.ticks li{position:relative;padding-left:34px;font-size:16px;color:var(--brown-2)}
+.ticks li b{color:var(--brown)}
+.ticks li:before{content:"✓";position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700}
+.side-note{margin:18px 0 8px;font-size:14px;color:var(--brown-2)}
+.reel-btns{display:flex;gap:10px;flex-wrap:wrap}
+.reel-btns .btn{padding:10px 16px;font-size:14px}
+/* parents corner */
+.tips{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.tip{background:#fff;border-radius:22px;box-shadow:var(--shadow);border-left:8px solid var(--tc);overflow:hidden}
+.tip summary{list-style:none;display:flex;gap:12px;align-items:flex-start;padding:18px 18px;cursor:pointer}
+.tip summary::-webkit-details-marker{display:none}
+.tip-ic{flex:none;width:46px;height:46px;border-radius:14px;background:var(--cream);display:grid;place-items:center;font-size:24px}
+.tip summary b{display:block;font-size:17px;font-weight:600;line-height:1.35}
+.tip summary small{display:block;font-size:14.5px;color:var(--brown-2);margin-top:4px;line-height:1.5}
+.tip-more{flex:none;margin-left:auto;width:30px;height:30px;border-radius:50%;background:var(--tc);color:#fff;display:grid;place-items:center;font-weight:700;transition:transform .2s}
+.tip[open] .tip-more{transform:rotate(45deg)}
+.tip ul{margin:0 18px 16px 76px;padding-left:18px;font-size:15px;color:var(--brown);display:grid;gap:4px}
+.tip-cta{display:inline-block;margin:0 18px 18px 76px;background:var(--pink);color:#fff;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;padding:8px 16px}
+@media (max-width:860px){
+  .reels-grid{grid-template-columns:1fr;gap:18px}
+  .reel-strip{margin:0 -16px;padding:4px 16px 12px;scroll-padding:16px}
+  .reel{width:min(250px,66vw)}
+  .reel-side{text-align:left}
+  .tips{grid-template-columns:1fr}
+}
+@media (max-width:520px){ .tip ul,.tip-cta{margin-left:18px} }
+
+/* sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,246,226,.96);backdrop-filter:blur(8px);border-top:2px dashed rgba(91,58,41,.14);display:flex;gap:10px}
+.sticky .btn{flex:1;padding:13px 10px;font-size:15px}
+.sticky .btn-white{flex:.55}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s, transform .6s}
+.reveal.in{opacity:1;transform:none}
+
+
+.promo{display:inline-block;margin-top:16px;background:#fff;border:2px dashed var(--orange);border-radius:16px;padding:8px 14px;font-size:15px}
+.promo b{color:var(--pink)} .promo small{color:var(--brown-2)}
+.test-cta{position:relative}
+.test-cta .boy{width:120px;margin:0 auto 6px}
+.course-body{grid-template-columns:220px 1fr auto}
+.course-photo{width:200px;height:200px !important;object-fit:cover;border-radius:18px;border:4px solid var(--cream)}
+.age{display:inline-block;background:var(--orange-soft);color:var(--brown);font-weight:600;font-size:14px;border-radius:999px;padding:3px 12px;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.gallery figure{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.gallery img{width:100%;height:100% !important;object-fit:cover}
+.gallery .g-big{grid-column:1/-1}
+.gallery .g-room,.gallery .g-sq{grid-column:span 2}
+.gallery .g-half{grid-column:span 3;aspect-ratio:4/3}
+.gallery .g-room{aspect-ratio:4/3}
+.g-label{grid-column:1/-1;margin:10px 0 -2px;font-weight:600;font-size:16px;color:var(--brown);display:flex;align-items:center;gap:8px}
+.g-label:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--pink)}
+.gallery .g-sq{aspect-ratio:1}
+.gallery figure:not(.g-big) figcaption{left:50%;transform:translateX(-50%);bottom:8px;font-size:13px}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:var(--brown);color:#fff;font-family:'Fredoka';font-weight:600;border-radius:999px;padding:2px 12px;font-size:14px}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.extra{background:#fff;border-radius:26px;padding:22px;box-shadow:var(--shadow);border-top:10px solid var(--c)}
+.extra-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.extra-top span{font-weight:600;color:var(--c);font-size:17px}
+.extra-top b{font-family:'Fredoka';font-size:26px;font-weight:700}
+.extra-top b small{font-family:'Mitr';font-size:13px;font-weight:500;color:var(--brown-2)}
+.extra h3{font-size:20px;font-weight:600}
+.extra p{font-size:15.5px;color:var(--brown-2);margin-top:4px}
+.extra .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.extra .tags span{font-size:13px;background:var(--cream);border-radius:999px;padding:3px 11px;font-weight:500}
+.h-grid{display:grid;grid-template-columns:auto auto;gap:0 16px;font-size:15px;color:var(--brown-2);margin-top:2px}
+.h-grid .closed{color:var(--pink);font-weight:600}
+.c-row.hours{align-items:flex-start}
+.f-logo{width:96px;margin:0 auto 10px}
+@media (max-width:860px){
+  .course-body{grid-template-columns:1fr}
+  .course-photo{width:100%;height:auto !important;aspect-ratio:16/10}
+  .extras{grid-template-columns:1fr}
+  .gallery{gap:8px}
+}
+@media (max-width:860px){
+  .nav-links{display:none}
+  .hero{padding-top:20px}
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-art{order:-1;margin-bottom:-6px}
+  .mascot{width:min(190px,50%)}
+  .blob{width:min(250px,66%);top:14%}
+  .free-stamp{width:98px;height:98px;left:4%}
+  .free-stamp b{font-size:27px}
+  .free-stamp small{font-size:10.5px}
+  .bubble{font-size:17px;right:4%}
+  .hero p.lead{margin:0 auto}
+  .plg,.hero-cta{justify-content:center}
+  .steps,.why-grid{grid-template-columns:1fr 1fr}
+  .steps .step:last-child{grid-column:1/-1}
+  .course-body{grid-template-columns:1fr}
+  .price{justify-content:flex-start}
+  .course-foot,.contact-grid,.fb-card{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .wrap{padding:0 16px}
+  .sec{padding:48px 0}
+  .steps,.why-grid{grid-template-columns:1fr}
+  .why{display:grid;grid-template-columns:64px 1fr;gap:14px;text-align:left;align-items:center;padding:18px}
+  .why .ico{width:64px;height:64px;margin:0}
+  .course-bar{padding:14px 16px}
+  .course-body{padding:16px}
+  .hero-cta .btn{width:100%}
+}
+@media (min-width:861px){ .sticky{display:none} body{padding-bottom:0} }
+@media (prefers-reduced-motion:reduce){ .mascot{animation:none} .reveal{opacity:1;transform:none} }
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="ยีราฟนครพนม">
+      <img src="assets/logo.png" alt="Giraffe" width="420" height="95" style="height:30px;width:auto">
+      <small class="logo-sub">นครพนม</small>
+    </a>
+    <nav class="nav-links">
+      <a href="#reels">ห้องเรียนจริง</a>
+      <a href="#test">ทดสอบวัดระดับ</a>
+      <a href="#why">ทำไมต้องยีราฟ</a>
+      <a href="#courses">คอร์สเรียน</a>
+      <a href="#parents">มุมพ่อแม่</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+    <a class="btn btn-pink btn-sm" href="https://m.me/giraffenkp" target="_blank" rel="noopener">ทักแชท</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="bg-dots" aria-hidden="true">
+    <i style="width:18px;height:18px;background:var(--green);top:12%;left:6%"></i>
+    <i style="width:12px;height:12px;background:var(--pink);top:70%;left:3%"></i>
+    <i style="width:22px;height:22px;background:var(--orange);top:18%;right:4%"></i>
+    <i style="width:10px;height:10px;background:var(--sky);bottom:10%;right:12%"></i>
+    <i style="width:14px;height:14px;background:var(--mint);top:46%;left:47%"></i>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill-tag"><span>4–12 ปี</span>สอนภาษาอังกฤษผ่านกิจกรรม · นครพนม</div>
+      <h1 class="outline">ภาษาอังกฤษ<br>ที่ลูก<span class="big">สนุก</span><br>จน<span class="big o">กล้าพูด</span></h1>
+      <p class="lead">ที่ยีราฟนครพนม เด็ก ๆ เรียนผ่านการเล่น ลงมือทำจริง ค่อย ๆ สร้างพื้นฐานแน่นตามจังหวะของตัวเอง <b>ไม่กดดัน ไม่ท่องจำ</b></p>
+      <div class="plg en"><span style="background:var(--pink)">Play</span><span style="background:var(--orange)">Learn</span><span style="background:var(--green)">Grow</span></div>
+      <div class="hero-cta">
+        <a class="btn btn-pink" href="https://m.me/giraffenkp" target="_blank" rel="noopener">💬 ทักแชทนัดทดสอบวัดระดับฟรี</a>
+        <a class="btn btn-white" href="#courses">ดูคอร์สทั้งหมด</a>
+      </div>
+      <div class="promo">🎁 <b>พิเศษ!</b> นักเรียนใหม่รับเสื้อยีราฟนครพนมฟรี 1 ตัว <small>(จำนวนจำกัด)</small></div>
+      <div class="hero-note">📍 ตรงข้าม ร.ร.อนุบาลนครพนม · 📞 081-1123465</div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+      <div class="bubble">Hello! <small>มาเล่นด้วยกันนะ</small></div>
+      <img class="mascot" src="assets/giraffe-girl.png" alt="Giraffe Girl มาสคอตยีราฟนครพนม" width="520" height="864">
+      <div class="free-stamp"><div><small>ทดสอบวัดระดับ</small><b>ฟรี!</b><small>นัดวัน-เวลาได้</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section class="sec reels-sec" id="reels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">Real Class · Reels</div>
+      <h2 class="outline">แอบดูห้องเรียนจริง<br>ที่ยีราฟนครพนม</h2>
+      <p>คลิปจากคลาสจริงและพาทัวร์สาขา เลื่อนดูได้ แตะที่คลิปเพื่อเปิดเสียง</p>
+    </div>
+    <div class="reels-grid">
+      <div class="reel-strip reveal">
+        <!-- เพิ่มคลิปใหม่: คัดลอก <figure class="reel"> แล้วเปลี่ยนไฟล์ใน assets/reels/ -->
+        <figure class="reel">
+          <video src="assets/reels/reel-01.mp4" poster="assets/reels/reel-01.jpg" muted loop playsinline preload="metadata" aria-label="คลิปห้องเรียน: ประดิษฐ์ของเล่นเอง กล้าพูด กล้าตอบ"></video>
+          <button type="button" class="reel-sound" aria-label="เปิดเสียง">🔇</button>
+          <figcaption>ประดิษฐ์ของเล่นเอง · กล้าพูด กล้าตอบ</figcaption>
+        </figure>
+        <figure class="reel">
+          <video src="assets/reels/reel-02.mp4" poster="assets/reels/reel-02.jpg" muted loop playsinline preload="metadata" aria-label="คลิปพาทัวร์ยีราฟนครพนม: Play Zone มุมของเล่น และห้องเรียน"></video>
+          <button type="button" class="reel-sound" aria-label="เปิดเสียง">🔇</button>
+          <figcaption>พาทัวร์สาขา · Play Zone · ห้องเรียน</figcaption>
+        </figure>
+      </div>
+      <div class="reel-side reveal">
+        <h3>ที่ยีราฟนครพนม น้อง ๆ ได้…</h3>
+        <ul class="ticks">
+          <li><b>ประดิษฐ์ของเล่นเอง</b> แล้วใช้มันเล่นเป็นภาษาอังกฤษ คำศัพท์จึงติดแน่นกว่าการท่อง</li>
+          <li><b>กล้าพูด กล้าตอบ</b> เป็นภาษาอังกฤษกับครูและเพื่อน</li>
+          <li><b>ทุกคนได้พูด ทุกคนได้เล่น</b> เพราะเราเรียนกันเป็นกลุ่มเล็ก</li>
+          <li><b>เล่นอย่างปลอดภัย</b> ใน Play Zone และมุมของเล่นที่เหมาะกับวัย</li>
+        </ul>
+        <p class="side-note">คลิปใหม่อัปเดตทุกสัปดาห์ที่</p>
+        <div class="reel-btns">
+          <a class="btn btn-white" href="https://www.tiktok.com/@giraffenkp" target="_blank" rel="noopener">▶ TikTok @giraffenkp</a>
+          <a class="btn btn-white" href="https://www.facebook.com/giraffenkp" target="_blank" rel="noopener">👍 เพจ ยีราฟนครพนม</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEST STEPS -->
+<section class="sec test" id="test">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">Free Placement Test</div>
+      <h2 class="outline">เริ่มต้นง่าย ๆ<br>ด้วยการทดสอบวัดระดับฟรี</h2>
+      <p>เพราะเราสอนตามพื้นฐานของเด็กแต่ละคน ทุกคนจึงเริ่มจากการมาทำความรู้จักกันที่สาขาก่อน</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num" style="background:var(--pink)">1</div>
+        <h3>ทักแชทหรือโทรนัดวัน-เวลา</h3>
+        <p>ทักเพจ <b>ยีราฟนครพนม</b> หรือโทร 081-1123465 เลือกช่วงเวลาที่สะดวกได้เลยค่ะ</p>
+      </div>
+      <div class="step reveal">
+        <div class="num" style="background:var(--orange)">2</div>
+        <h3>พาน้องมาทดสอบที่สาขา</h3>
+        <p>บรรยากาศสบาย ๆ เหมือนมาเล่นกับคุณครู น้อง ๆ ได้ลองทำกิจกรรมสั้น ๆ ไม่มีค่าใช้จ่าย</p>
+      </div>
+      <div class="step reveal">
+        <div class="num" style="background:var(--green)">3</div>
+        <h3>ครูแนะนำคอร์สที่เหมาะกับน้อง</h3>
+        <p>คุณพ่อคุณแม่ได้ฟังผลและคำแนะนำจากครู แล้วค่อยตัดสินใจเลือกคอร์สได้อย่างสบายใจ</p>
+      </div>
+    </div>
+    <div class="test-cta reveal">
+      <img class="boy" src="assets/giraffe-boy.png" alt="Giraffe Boy" width="360" height="581" loading="lazy">
+      <a class="btn btn-pink" href="https://m.me/giraffenkp" target="_blank" rel="noopener">💬 ทักแชทนัดทดสอบวัดระดับฟรี</a>
+      <span class="hand">อย่าลืม! นัดหมายวัน-เวลา มาทดสอบวัดระดับนะคะ 🦒</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">Why Giraffe</div>
+      <h2 class="outline">เรียนแบบยีราฟ<br>เด็ก ๆ ได้อะไร</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal">
+        <div class="ico" style="background:var(--pink-soft)"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="13" cy="20" r="9" fill="#F0619A"/><rect x="22" y="11" width="14" height="18" rx="4" fill="#F7A21B"/><path d="M8 34h24" stroke="#5B3A29" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div><h3>เรียนผ่านการเล่น</h3><p>เกม เพลง งานคราฟท์ ทุกกิจกรรมพาไปสู่ภาษาอังกฤษอย่างเป็นธรรมชาติ</p></div>
+      </div>
+      <div class="why reveal">
+        <div class="ico" style="background:var(--orange-soft)"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M6 8h22a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H16l-7 6v-6H6a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" fill="#F7A21B"/><text x="9" y="22" font-family="Fredoka" font-weight="700" font-size="11" fill="#fff">Hi!</text><circle cx="33" cy="9" r="4" fill="#F0619A"/></svg></div>
+        <div><h3>กล้าพูด กล้าแสดงออก</h3><p>ไม่กลัวผิด ได้ลองพูดบ่อย ๆ กับครูและเพื่อน ความมั่นใจค่อย ๆ เติบโต</p></div>
+      </div>
+      <div class="why reveal">
+        <div class="ico" style="background:#E6F4D7"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="5" y="26" width="8" height="9" rx="2" fill="#8DCB52"/><rect x="16" y="18" width="8" height="17" rx="2" fill="#5BB4E5"/><rect x="27" y="9" width="8" height="26" rx="2" fill="#F0619A"/></svg></div>
+        <div><h3>สอนตามพื้นฐาน</h3><p>เริ่มจากจุดที่น้องเป็น ปูพื้นฐานแน่นทีละขั้น แล้วต่อยอดไปข้างหน้า</p></div>
+      </div>
+      <div class="why reveal">
+        <div class="ico" style="background:#DFF0FB"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M15 5h10M17 5v10L8 31a3 3 0 0 0 2.6 4.5h18.8A3 3 0 0 0 32 31l-9-16V5" stroke="#5B3A29" stroke-width="3" fill="#fff" stroke-linejoin="round"/><path d="M11 27h18l3 4.5H8z" fill="#8DCB52"/><circle cx="18" cy="23" r="2" fill="#5BB4E5"/></svg></div>
+        <div><h3>ลงมือทำจริง</h3><p>ระบายสี ประดิษฐ์ ทดลอง ฝึกกล้ามเนื้อมัดเล็กและสมาธิไปพร้อมกัน</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="sec courses" id="courses">
+  <div class="bg-dots" aria-hidden="true">
+    <i style="width:16px;height:16px;background:var(--green);top:4%;left:8%"></i>
+    <i style="width:12px;height:12px;background:var(--pink);top:40%;right:3%"></i>
+    <i style="width:20px;height:20px;background:var(--orange);bottom:6%;left:4%"></i>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="sec-head reveal">
+      <div class="kicker en">Our Courses</div>
+      <h2 class="outline">หลักสูตรของเรา<br>สอนตามพื้นฐานของเด็กแต่ละคน</h2>
+      <p>ไม่แน่ใจว่าน้องควรเริ่มคอร์สไหน? ทดสอบวัดระดับก่อน ครูช่วยเลือกให้ค่ะ</p>
+    </div>
+
+    <div class="course-list">
+      <article class="course reveal">
+        <div class="course-bar" style="background:var(--sky)"><h3>Kinder Club</h3><span class="sessions">8 ครั้ง · ครั้งละ 60 นาที</span></div>
+        <div class="course-body">
+          <div class="art art-kinder" aria-hidden="true">
+            <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+              <circle class="k-shape k1" cx="70" cy="62" r="22" fill="#F7A21B" stroke="#5B3A29" stroke-width="4"/>
+              <path class="k-shape k2" d="M160 30 l9 19 21 3 -15 15 4 21 -19-10 -19 10 4-21 -15-15 21-3z" fill="#FFD84D" stroke="#5B3A29" stroke-width="4" stroke-linejoin="round"/>
+              <path class="k-shape k3" d="M250 38 l26 46 h-52z" fill="#8DCB52" stroke="#5B3A29" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M40 150 Q80 110 120 150 T200 150 T280 150" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+              <path class="k-line" d="M40 150 Q80 110 120 150 T200 150 T280 150" fill="none" stroke="#F0619A" stroke-width="9" stroke-linecap="round"/>
+              <g class="k-crayon"><g transform="rotate(-35)"><rect x="-6" y="-44" width="14" height="34" rx="3" fill="#F0619A" stroke="#5B3A29" stroke-width="3"/><rect x="-6" y="-34" width="14" height="8" fill="#fff" opacity=".7"/><path d="M-6 -10 h14 l-7 12z" fill="#FBC6DA" stroke="#5B3A29" stroke-width="3" stroke-linejoin="round"/></g></g>
+            </svg>
+            <span class="art-chip">✂️ คราฟท์ · ระบายสี</span>
+          </div>
+          <div>
+            <div class="age">👧 4–5 ขวบ · อ.1–อ.2</div>
+            <p>ภาษาอังกฤษก้าวแรกของน้องอนุบาล ฝึกกล้ามเนื้อมือมัดเล็กผ่านงานคราฟท์ ระบายสี สะสมคำศัพท์ และฝึกบทสนทนาสั้น ๆ ซ้ำ ๆ จนคุ้นเคย</p>
+            <div class="tags"><span>✂️ งานคราฟท์</span><span>✋ กล้ามเนื้อมัดเล็ก</span><span>💬 บทสนทนาสั้น ๆ</span></div>
+          </div>
+          <div class="price"><div><small>weekday</small><b>2,200</b><em>บาท</em></div><div><small>weekend</small><b>2,500</b><em>บาท</em></div></div>
+        </div>
+      </article>
+      <article class="course reveal">
+        <div class="course-bar" style="background:var(--green)"><h3>Intermediate Alphabet</h3><span class="sessions">12 ครั้ง · ครั้งละ 90 นาที</span></div>
+        <div class="course-body">
+          <div class="art art-ia" aria-hidden="true">
+            <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+              <path d="M95 165 L135 40 L175 165 M110 120 L160 120" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M95 165 L135 40 L175 165 M110 120 L160 120" fill="none" stroke="#B9DE93" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+              <path class="ia-trace" d="M95 165 L135 40 L175 165 M110 120 L160 120" fill="none" stroke="#5B3A29" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+              <g class="ia-pencil"><g transform="rotate(-30)"><rect x="-6" y="-46" width="13" height="34" rx="2" fill="#F7A21B" stroke="#5B3A29" stroke-width="3"/><rect x="-6" y="-52" width="13" height="8" rx="2" fill="#F0619A" stroke="#5B3A29" stroke-width="3"/><path d="M-6 -12 h13 l-6.5 12z" fill="#FDE6C4" stroke="#5B3A29" stroke-width="3" stroke-linejoin="round"/></g></g>
+              <text class="ia-small" x="205" y="165" font-family="Fredoka" font-weight="700" font-size="78" fill="#F0619A" stroke="#5B3A29" stroke-width="3" paint-order="stroke">a</text>
+              <g class="ia-float"><rect x="250" y="34" width="38" height="38" rx="10" fill="#fff"/><text x="269" y="62" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="24" fill="#5BB4E5">b</text></g>
+              <g class="ia-float f2"><rect x="30" y="40" width="38" height="38" rx="10" fill="#fff"/><text x="49" y="68" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="24" fill="#F7A21B">c</text></g>
+            </svg>
+            <span class="art-chip">✏️ A–Z เขียนถูกวิธี</span>
+          </div>
+          <div>
+            <div class="age">👧 5 ขวบขึ้นไป · อ.2 ขึ้นไป</div>
+            <p>สำหรับน้องที่พร้อมจับดินสอ เรียนรู้วิธีเขียน A–Z ที่ถูกต้องทีละตัว จดจำทั้งตัวพิมพ์ใหญ่และพิมพ์เล็ก พร้อมคำศัพท์และฝึกสนทนากับคุณครู</p>
+            <div class="tags"><span>🔤 A–Z ใหญ่และเล็ก</span><span>✏️ เขียนถูกวิธี</span><span>🎓 รับใบประกาศเมื่อจบเล่ม</span></div>
+          </div>
+          <div class="price"><div><small>weekday</small><b>3,200</b><em>บาท</em></div><div><small>weekend</small><b>3,500</b><em>บาท</em></div></div>
+        </div>
+      </article>
+      <article class="course reveal">
+        <div class="course-bar" style="background:var(--rust)"><h3>Giraffe Starter</h3><span class="sessions">12 ครั้ง · ครั้งละ 90 นาที</span></div>
+        <div class="course-body">
+          <div class="art art-starter" aria-hidden="true">
+            <img class="st-girl" src="assets/giraffe-girl.png" alt="">
+            <img class="st-boy" src="assets/giraffe-boy.png" alt="">
+            <span class="st-b b1 en">Hello! 👋</span>
+            <span class="st-b b2 en">Hi! How are you?</span>
+            <span class="st-b b3 en">I'm great! 🌟</span>
+          </div>
+          <div>
+            <div class="age">👧 7–8 ขวบขึ้นไป · เริ่มชั้นประถม</div>
+            <p>ฝึกฟัง ฝึกพูด ฝึกสนทนา สะสมคำศัพท์และประโยคพื้นฐาน ผ่านเกมและกิจกรรมด้วยกัน เตรียมพร้อมสู่การอ่านภาษาอังกฤษในขั้นต่อไป</p>
+            <div class="tags"><span>🎲 เรียนผ่านเกม</span><span>🧩 ประโยคพื้นฐาน</span><span>📖 พร้อมสู่การอ่าน</span></div>
+          </div>
+          <div class="price"><div><small>weekday</small><b>3,200</b><em>บาท</em></div><div><small>weekend</small><b>3,500</b><em>บาท</em></div></div>
+        </div>
+      </article>
+      <article class="course reveal">
+        <div class="course-bar" style="background:var(--violet)"><h3>Dr.Spelling</h3><span class="sessions">12 ครั้ง · ครั้งละ 90 นาที</span></div>
+        <div class="course-body">
+          <button type="button" class="art art-spell" id="spellArt" aria-label="แตะเพื่อถอดรหัสคำถัดไป">
+            <span class="sp-tiles" id="spTiles"></span>
+            <span class="sp-word" id="spWord"></span>
+            <span class="sp-glass">🔍</span>
+            <span class="art-chip">👆 แตะเพื่อถอดรหัสคำใหม่</span>
+          </button>
+          <div>
+            <div class="age">👧 7 ขวบขึ้นไป · ประถมที่อ่านไทยคล่องแล้ว</div>
+            <p>สะกดคำภาษาอังกฤษด้วยตัวเองผ่านวิธี <b>“ถอดรหัส”</b> เทียบตัวอักษรอังกฤษเป็นตัวไทยทีละตัว แล้วประสมเป็นคำ เรียนสนุก เข้าใจง่าย ไม่ต้องท่องจำ อ่านได้ เขียนได้ สนุกขึ้น</p>
+            <div class="tags"><span>🔍 ถอดรหัส</span><span>📚 ไม่ต้องท่องจำ</span></div>
+          </div>
+          <div class="price"><div><small>weekday</small><b>3,200</b><em>บาท</em></div><div><small>weekend</small><b>3,500</b><em>บาท</em></div></div>
+        </div>
+      </article>
+      <article class="course reveal">
+        <div class="course-bar" style="background:var(--blue)"><h3>Grammar</h3><span class="sessions">12 ครั้ง · ครั้งละ 90 นาที</span></div>
+        <div class="course-body">
+          <div class="art art-gram" aria-hidden="true">
+            <div class="g-row en"><span class="g-blk g1">I</span><span class="g-blk g2">like</span><span class="g-blk g3">apples</span><span class="g-dot">.</span></div>
+            <span class="g-star">⭐ Great!</span>
+            <span class="art-chip">🧩 ต่อประโยคให้ถูก</span>
+          </div>
+          <div>
+            <div class="age">👧 5 ขวบขึ้นไป · เรียนตามระดับ</div>
+            <p>เข้าใจหลักไวยากรณ์และประโยคภาษาอังกฤษ ผ่านกิจกรรม งานประดิษฐ์ และเกม ไม่เครียด เพื่อใช้สื่อสารจริง ต่อยอดการเรียนที่โรงเรียน และการสอบ</p>
+            <div class="tags"><span>🗣️ ใช้สื่อสารจริง</span><span>🏫 ต่อยอดที่โรงเรียน</span><span>📝 การสอบ</span></div>
+          </div>
+          <div class="price"><div><small>weekday</small><b>2,900</b><em>บาท</em></div><div><small>weekend</small><b>3,200</b><em>บาท</em></div></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="course-foot">
+      <div class="note-card reveal">
+        <div class="dot" style="background:var(--pink-soft)">🎯</div>
+        <div><h4>ทดสอบวัดระดับฟรี ก่อนเลือกคอร์ส</h4><p>ครูประเมินพื้นฐานแล้วแนะนำคอร์สและกลุ่มเรียนที่เหมาะกับน้องที่สุด</p></div>
+      </div>
+      <div class="note-card reveal">
+        <div class="dot" style="background:var(--orange-soft)">🦒</div>
+        <div><h4>เรียนสัปดาห์ละ 1 ครั้ง · กลุ่มเล็ก ครูดูแลทั่วถึง</h4><p>ราคาต่อคอร์ส แยกรอบวันธรรมดา (weekday) และเสาร์-อาทิตย์ (weekend) · นักเรียนใหม่มีค่าแรกเข้า 1,000 บาท</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec gallery-sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">Inside Giraffe</div>
+      <h2 class="outline">พื้นที่แห่งความสุข<br>ของเด็ก ๆ นครพนม</h2>
+      <p>ห้องโถงโปร่ง สว่าง มี Play Zone ห้องเรียนสีสดใส และมุมนั่งรอสำหรับคุณพ่อคุณแม่</p>
+    </div>
+    <div class="gallery reveal">
+      <figure class="g-big"><img src="assets/playzone.jpg" alt="Play Zone และห้องโถงของยีราฟนครพนม" width="1400" height="1050" loading="lazy"></figure>
+      <p class="g-label">ห้องเรียนสดใส 3 ห้อง 3 สี</p>
+      <figure class="g-room"><img src="assets/room-green.jpg" alt="ห้องเรียนโต๊ะสีเขียว" loading="lazy"></figure>
+      <figure class="g-room"><img src="assets/room-yellow.jpg" alt="ห้องเรียนโต๊ะสีเหลือง" loading="lazy"></figure>
+      <figure class="g-room"><img src="assets/room-pink.jpg" alt="ห้องเรียนโต๊ะสีชมพู" loading="lazy"></figure>
+      <p class="g-label">เรียน · เล่น · ทำกิจกรรมด้วยกัน</p>
+      <figure class="g-sq"><img src="assets/group-learn.jpg" alt="น้อง ๆ ทำกิจกรรมด้วยกันที่โต๊ะเรียนสีชมพู" loading="lazy"></figure>
+      <figure class="g-sq"><img src="assets/group-play.jpg" alt="น้อง ๆ เล่นตัวต่อด้วยกันที่ Play Zone" loading="lazy"></figure>
+      <figure class="g-sq"><img src="assets/group-teach.jpg" alt="คุณครูนั่งสอนน้อง ๆ เป็นกลุ่ม" loading="lazy"></figure>
+      <p class="g-label">มุมนั่งรอสบาย ๆ สำหรับคุณพ่อคุณแม่</p>
+      <figure class="g-half"><img src="assets/lobby.jpg" alt="ห้องโถงและมุมนั่งรอของผู้ปกครอง" loading="lazy"></figure>
+      <figure class="g-half"><img src="assets/kids-corner.jpg" alt="น้อง ๆ เล่นที่มุมโต๊ะของเล่นในห้องโถง" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="sec extras-sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">More at Giraffe</div>
+      <h2 class="outline">บริการเสริมจากยีราฟ</h2>
+    </div>
+    <div class="extras">
+      <div class="extra reveal" style="--c:var(--orange)">
+        <div class="extra-top"><span class="en">After School Club</span><b>1,500 <small>บาท/เดือน</small></b></div>
+        <h3>ดูแลน้องหลังเลิกเรียน</h3>
+        <p>สำหรับน้องอนุบาล 1–3 มาเล่นที่ Play Zone ทำกิจกรรม ศิลปะ ประดิษฐ์ และเกมเสริมทักษะ ปลอดภัย อบอุ่น เหมือนบ้านหลังที่สอง</p>
+        <div class="tags"><span>🗓️ อังคาร–ศุกร์</span><span>⏰ 16:00–17:30 น.</span></div>
+      </div>
+      <div class="extra reveal" style="--c:var(--pink)">
+        <div class="extra-top"><span class="en">Private Class</span><b>400 <small>บาท/ชม.</small></b></div>
+        <h3>เรียนตัวต่อตัวกับคุณครู</h3>
+        <p>เลือกเรื่องที่อยากเรียนได้เอง เหมาะกับน้องที่อยากเสริมเฉพาะจุด หรืออยากได้เวลาเรียนที่ยืดหยุ่น</p>
+        <div class="tags"><span>🗓️ เย็นวันอังคาร–ศุกร์</span><span>👩‍🏫 1 ต่อ 1</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARENTS CORNER -->
+<section class="sec parents-sec" id="parents">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">Parents' Corner</div>
+      <h2 class="outline">มุมคุณพ่อคุณแม่</h2>
+      <p>เรื่องเล็ก ๆ ที่ช่วยให้ลูกรักภาษาอังกฤษ แตะเพื่ออ่านต่อ</p>
+    </div>
+    <div class="tips">
+      <details class="tip reveal" style="--tc:var(--pink)">
+        <summary><span class="tip-ic">🎈</span><span><b>ความสุข คือแรงจูงใจที่ดีที่สุดของการเรียนรู้</b><small>เด็กที่สนุกกับการเรียน จะอยากกลับมาเรียนอีก และค่อย ๆ เปิดใจให้ภาษาใหม่เอง</small></span><span class="tip-more">+</span></summary>
+        <ul><li>วัยเด็กคือช่วงสร้างทัศนคติที่ดีต่อการเรียน</li><li>ทุกเกม เพลง และงานคราฟท์ ซ่อนคำศัพท์และประโยคไว้เสมอ</li><li>เมื่อเรียนแล้วมีความสุข การเรียนรู้ก็เกิดขึ้นเองอย่างเป็นธรรมชาติ</li></ul>
+      </details>
+      <details class="tip reveal" style="--tc:var(--orange)">
+        <summary><span class="tip-ic">🗣️</span><span><b>ทุกครั้งที่ลูก “กล้าตอบ” คือความมั่นใจที่เพิ่มขึ้น</b><small>ห้องเรียนที่ไม่กลัวผิด ทำให้เด็ก ๆ กล้าลองพูด และความกล้าเล็ก ๆ จะค่อย ๆ โตขึ้นทุกสัปดาห์</small></span><span class="tip-more">+</span></summary>
+        <ul><li>ครูชวนพูดซ้ำ ๆ ในสถานการณ์สนุก ๆ</li><li>ผิดได้ ลองใหม่ได้ ไม่มีใครถูกดุ</li><li>ชื่นชมความพยายาม มากกว่าความถูกต้องอย่างเดียว</li></ul>
+      </details>
+      <details class="tip reveal" style="--tc:var(--green)">
+        <summary><span class="tip-ic">📈</span><span><b>ยิ่งเรียนต่อเนื่อง ยิ่งเห็นพัฒนาการ</b><small>ภาษาก็เหมือนการออกกำลังกาย ได้ใช้สม่ำเสมอ พื้นฐานก็แน่นขึ้นและต่อยอดได้ไกล</small></span><span class="tip-more">+</span></summary>
+        <ul><li>เรียนสัปดาห์ละ 1 ครั้ง ต่อเนื่องเป็นคอร์ส</li><li>แต่ละคอร์สปูพื้นฐานไว้รองรับคอร์สถัดไปอย่างเป็นขั้นตอน</li><li>ชวนลูกเล่าสิ่งที่เรียนที่บ้าน ช่วยทบทวนได้แบบสบาย ๆ</li></ul>
+      </details>
+      <details class="tip reveal" style="--tc:var(--sky)">
+        <summary><span class="tip-ic">🎯</span><span><b>ลูกควรเริ่มคอร์สไหน ไม่ต้องเดา</b><small>การทดสอบวัดระดับช่วยให้รู้ว่าน้องพร้อมตรงไหน แล้วเริ่มจากจุดที่เหมาะกับน้องจริง ๆ</small></span><span class="tip-more">+</span></summary>
+        <ul><li>ใช้เวลาไม่นาน บรรยากาศเหมือนมาเล่นกับครู</li><li>ครูสรุปผลและแนะนำคอร์สให้คุณพ่อคุณแม่ฟัง</li><li>ฟรี ไม่มีค่าใช้จ่าย นัดวัน-เวลาได้เลย</li></ul><a class="tip-cta" href="https://m.me/giraffenkp" target="_blank" rel="noopener">💬 ทักแชทนัดทดสอบวัดระดับฟรี</a>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FB PAGE -->
+<section class="fb">
+  <div class="wrap">
+    <div class="fb-card reveal">
+      <span class="ring" style="width:220px;height:220px;right:-60px;top:-80px"></span>
+      <span class="ring" style="width:140px;height:140px;right:160px;bottom:-90px"></span>
+      <div style="position:relative">
+        <h2>ติดตามบรรยากาศ<br>ห้องเรียนจริงทุกสัปดาห์</h2>
+        <p>ผลงานของน้อง ๆ คลิปกิจกรรมใหม่ ๆ และข่าวคอร์สล่าสุด ค้นหา <b>@giraffenkp</b> ได้ทุกช่องทาง</p>
+      </div>
+      <div class="socials big"><a href="https://www.facebook.com/giraffenkp" target="_blank" rel="noopener" aria-label="Facebook ยีราฟนครพนม" style="--sc:#1877F2"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg><span>Facebook</span></a><a href="https://www.tiktok.com/@giraffenkp" target="_blank" rel="noopener" aria-label="TikTok ยีราฟนครพนม" style="--sc:#111"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.6 3c.3 2.1 1.6 3.6 3.9 3.8v3a7 7 0 0 1-3.9-1.2v6.1A5.8 5.8 0 1 1 10.8 9v3.1a2.8 2.8 0 1 0 2.8 2.8V3h3z"/></svg><span>TikTok</span></a><a href="https://www.instagram.com/giraffenkp" target="_blank" rel="noopener" aria-label="Instagram ยีราฟนครพนม" style="--sc:#E1306C"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://line.me/R/ti/p/@441xzwxt" target="_blank" rel="noopener" aria-label="LINE ยีราฟนครพนม" style="--sc:#06C755"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.1.7.2.8.5.1.3 0 .7 0 .9l-.1.8c0 .3-.2.9.8.5s5.3-3.1 7.2-5.4c1.3-1.4 1.9-2.9 1.9-4.4 0-4-4-7.2-9.1-7.2z"/></svg><span>LINE</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker en">Visit Us</div>
+      <h2 class="outline">แวะมาเล่นกับยีราฟนะคะ</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal">
+        <a class="c-row" href="https://m.me/giraffenkp" target="_blank" rel="noopener">
+          <span class="ic" style="background:var(--pink-soft)">💬</span>
+          <span><b>ทักแชทเพจ ยีราฟนครพนม</b><small>facebook.com/giraffenkp · ตอบเรื่องคอร์สและนัดทดสอบ</small></span>
+        </a>
+        <a class="c-row" href="tel:0811123465">
+          <span class="ic" style="background:var(--orange-soft)">📞</span>
+          <span><b>081-1123465</b><small>โทรสอบถาม / นัดวัน-เวลาทดสอบวัดระดับ</small></span>
+        </a>
+        <a class="c-row" href="https://line.me/R/ti/p/@441xzwxt" target="_blank" rel="noopener">
+          <span class="ic" style="background:#DDF6E6;color:#06C755"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.1.7.2.8.5.1.3 0 .7 0 .9l-.1.8c0 .3-.2.9.8.5s5.3-3.1 7.2-5.4c1.3-1.4 1.9-2.9 1.9-4.4 0-4-4-7.2-9.1-7.2z"/></svg></span>
+          <span><b>LINE OA ยีราฟนครพนม</b><small>@441xzwxt · แอดไลน์สอบถามได้</small></span>
+        </a>
+        <div class="c-row">
+          <span class="ic" style="background:#E6F4D7">🏫</span>
+          <span><b>ตรงข้าม ร.ร.อนุบาลนครพนม</b><small>อ.เมือง จ.นครพนม</small></span>
+        </div>
+        <div class="c-row hours">
+          <span class="ic" style="background:#DFF0FB">⏰</span>
+          <span><b>เวลาทำการ</b>
+            <span class="h-grid"><span>อังคาร–ศุกร์</span><span>15:00–18:30</span><span>เสาร์</span><span>09:30–12:30</span><span>อาทิตย์</span><span>10:00–15:00</span><span>จันทร์</span><span class="closed">หยุด</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="map-card reveal">
+        <img class="building" src="assets/building.jpg" alt="อาคารยีราฟนครพนม ตึกสีขาว ตรงข้ามโรงเรียนอนุบาลนครพนม" loading="lazy">
+        <div class="grid-bg"></div>
+        <div>
+          <div class="en" style="font-weight:600;opacity:.9">📍 Giraffe Nakhon Phanom</div>
+          <h3>ยีราฟนครพนม<br>ตรงข้ามโรงเรียนอนุบาลนครพนม</h3>
+          <p class="map-hint">มองหาตึกสีขาว ป้ายลายยีราฟหน้าอาคาร 🦒</p>
+        </div>
+        <a class="btn btn-orange" href="https://maps.app.goo.gl/uYTduPix9b3f4M2h6" target="_blank" rel="noopener">🗺️ เปิดแผนที่</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="f-logo" src="assets/logo-nkp-round.png" alt="ยีราฟนครพนม" width="320" height="320" loading="lazy">
+    <div class="plg en"><span style="background:var(--pink)">Play</span><span style="background:var(--orange)">Learn</span><span style="background:var(--green)">Grow</span></div>
+<div class="socials"><a href="https://www.facebook.com/giraffenkp" target="_blank" rel="noopener" aria-label="Facebook ยีราฟนครพนม" style="--sc:#1877F2"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg><span>Facebook</span></a><a href="https://www.tiktok.com/@giraffenkp" target="_blank" rel="noopener" aria-label="TikTok ยีราฟนครพนม" style="--sc:#111"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.6 3c.3 2.1 1.6 3.6 3.9 3.8v3a7 7 0 0 1-3.9-1.2v6.1A5.8 5.8 0 1 1 10.8 9v3.1a2.8 2.8 0 1 0 2.8 2.8V3h3z"/></svg><span>TikTok</span></a><a href="https://www.instagram.com/giraffenkp" target="_blank" rel="noopener" aria-label="Instagram ยีราฟนครพนม" style="--sc:#E1306C"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://line.me/R/ti/p/@441xzwxt" target="_blank" rel="noopener" aria-label="LINE ยีราฟนครพนม" style="--sc:#06C755"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3.5c-5 0-9 3.2-9 7.2 0 3.6 3.2 6.6 7.5 7.1.3.1.7.2.8.5.1.3 0 .7 0 .9l-.1.8c0 .3-.2.9.8.5s5.3-3.1 7.2-5.4c1.3-1.4 1.9-2.9 1.9-4.4 0-4-4-7.2-9.1-7.2z"/></svg><span>LINE</span></a></div>
+    🦒 ยีราฟนครพนม · สอนภาษาอังกฤษผ่านกิจกรรม เด็ก 4–12 ปี<br>
+    📍 ตรงข้ามโรงเรียนอนุบาลนครพนม · 📞 081-1123465
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-white" href="tel:0811123465">📞 โทร</a>
+  <a class="btn btn-pink" href="https://m.me/giraffenkp" target="_blank" rel="noopener">💬 นัดทดสอบวัดระดับฟรี</a>
+</div>
+
+<script>
+// Dr.Spelling decode art (tap for next word)
+(function(){
+  var words=[
+    {en:['c','a','t'],th:['ค','แ-','ท'],w:'แคท = cat 🐱'},
+    {en:['s','u','n'],th:['ซ','◌ั','น'],w:'ซัน = sun ☀️'},
+    {en:['p','i','g'],th:['พ','◌ิ','ก'],w:'พิก = pig 🐷'},
+    {en:['b','e','d'],th:['บ','เ-','ด'],w:'เบด = bed 🛏️'},
+    {en:['r','u','n'],th:['ร','◌ั','น'],w:'รัน = run 🏃'}
+  ], i=0;
+  var art=document.getElementById('spellArt'), t=document.getElementById('spTiles'), w=document.getElementById('spWord');
+  function render(){
+    var x=words[i];
+    t.innerHTML=x.en.map(function(c,k){return '<span class="sp-tile"><span class="f en">'+c+'</span><span class="b">'+x.th[k]+'</span></span>'}).join('');
+    w.textContent=x.w;
+    art.classList.remove('run'); void art.offsetWidth; art.classList.add('run');
+  }
+  art.addEventListener('click',function(){ i=(i+1)%words.length; render(); });
+  render();
+})();
+
+// Reels: autoplay muted when visible, tap to toggle sound
+(function(){
+  document.querySelectorAll('.reel').forEach(function(r){
+    var v=r.querySelector('video'), b=r.querySelector('.reel-sound');
+    function sync(){ b.textContent=v.muted?'🔇':'🔊'; b.setAttribute('aria-label',v.muted?'เปิดเสียง':'ปิดเสียง'); }
+    r.addEventListener('click',function(){ v.muted=!v.muted; if(v.paused){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); } sync(); });
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); } else { v.pause(); } }); },{threshold:.5}).observe(v);
+    }
+    sync();
+  });
+})();
+
+// Reveal on scroll
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
