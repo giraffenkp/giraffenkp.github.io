@@ -387,6 +387,12 @@ footer .plg{justify-content:center;font-size:16px;margin:0 0 10px}
 }
 @media (max-width:520px){ .lab-cta .btn{width:100%} }
 @media (prefers-reduced-motion:reduce){ .lab-art span{animation:none} }
+/* mobile floating media lab button */
+.lab-fab{display:none}
+@media (max-width:860px){
+  .lab-fab{display:inline-flex;align-items:center;gap:6px;position:fixed;right:14px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:31;background:var(--pink);color:#fff;font-family:'Mitr';font-weight:600;font-size:14px;text-decoration:none;border-radius:999px;padding:9px 16px;box-shadow:0 4px 0 #C9407A,0 8px 18px rgba(91,58,41,.18);transition:transform .15s}
+  .lab-fab:active{transform:translateY(3px);box-shadow:0 1px 0 #C9407A}
+}
 </style>
 </head>
 <body>
@@ -839,6 +845,8 @@ footer .plg{justify-content:center;font-size:16px;margin:0 0 10px}
     📍 ตรงข้ามโรงเรียนอนุบาลนครพนม · 📞 081-1123465
   </div>
 </footer>
+
+<a class="lab-fab" href="/medialab/" aria-label="ไปที่ Giraffe Media Lab">✨ Media Lab</a>
 
 <div class="sticky">
   <a class="btn btn-white" href="tel:0811123465">📞 โทร</a>
